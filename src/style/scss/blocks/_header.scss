@@ -1,0 +1,155 @@
+header {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 10;
+
+}
+
+.nav-section {
+    
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    min-height: 84px;
+    
+    align-items: center;
+    position: relative;
+
+    @include media ('>=768px') {
+        background-color: $blue;
+    }
+
+    @include media ('>=1024px') {
+        justify-content: space-around;
+        
+    }
+    
+   
+
+    .nav-title {
+        
+        
+        padding: 32px;
+
+        @include media ('<=767px') {
+            width: 100%;
+            background-color: $blue;
+        }
+    }
+
+    .nav-holder {
+        // padding: 20px;
+        // opacity: 0;
+        // visibility: visible;
+
+        @include media ('<=767px') {
+            width: 100%;
+            background-color: $blue;
+
+            @include animate(opacity visibility, 0.4s);
+            opacity: 0;
+            visibility: hidden;
+
+            &.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        }
+
+        
+
+        // @include media ('<=767px') {
+        //     display: none;
+        // }
+    }
+    
+    
+
+    .nav-list {
+        padding: 0px;
+
+       
+    }
+
+    .nav-item {
+        padding: 12px;
+        font-family: $secondary-font;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+    
+        @include media ('>=768px') {
+            display: inline-block;
+        }
+
+    }
+
+    
+
+    .burger-holder {
+        position: absolute;
+        right: 18px;
+        top: 38px;
+
+        @include media ('>=768px') {
+            display: none;
+        }
+    }
+
+    .burger-opener {
+        position: relative;
+        top: -13px;
+        width: 40px;
+        height: 24px;
+        background-color: transparent;
+        border: none;
+        outline: none;
+
+        .burger-lines, 
+        .burger-lines:before,
+        .burger-lines:after {
+            width: 40px;
+            height: 2px;
+            background-color: $white;
+            position: absolute;
+            left: 0px;
+
+        }
+
+        :before {
+            content: '';
+            top: -8px;
+            
+
+        }
+
+        :after {
+            content: '';
+            bottom: -8px;
+            
+        }
+
+        // .burger-lines {
+        //     top: 50%;
+        //     right: 18px;
+        //     transform: translateY(50%);
+        // }
+    }
+
+
+    
+
+    
+
+    
+
+    
+
+    
+}
+

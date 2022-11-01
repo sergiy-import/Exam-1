@@ -1,0 +1,62 @@
+.footer {
+    color: $white;
+    background-color: #000000;
+    padding: 80px 0;
+    text-align: center;
+    
+
+
+    .footer-title {
+        display: block;
+        margin-bottom: 8px;
+    }
+
+    .slogan {
+        font-family: $base-font;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0.2em;
+        
+    }
+
+    .social-media {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 275px;
+        margin: 0 auto;
+        padding: 20px 0 0;
+
+        .social-media-list {
+            font-size: 32px;
+        }
+
+        .social-media-item {
+            transition: all ease-in-out 0,4s;
+
+            .icon-facebook-f:hover {
+                color: #4267B2;
+            }
+
+            .icon-twitter:hover {
+                color: #1DA1F2;
+            }
+
+            .icon-linkedin:hover {
+                color: #0077b5;
+            }
+
+            .icon-youtube:hover {
+                color: #FF0000;
+            }
+
+            .icon-pinterest:hover {
+                color: #E60023;
+            }
+        }
+    }
+
+
+}
