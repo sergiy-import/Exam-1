@@ -111,10 +111,28 @@ header {
         border: none;
         outline: none;
 
+            // &.active {
+            //     span {
+            //         opacity: 0;
+            //         visibility: hidden;
+            //     }
+
+            //     &:before {
+            //         transform: rotate(-45deg);
+            //         top: 47%;
+            //     }
+
+            //     &:after {
+            //         transform: rotate(45deg);
+            //         bottom: 50%;
+            //     }
+            // }
+
         .burger-lines, 
         .burger-lines:before,
         .burger-lines:after {
-            width: 40px;
+            // @include animate(all, 0.4s);
+            width: 37px;
             height: 2px;
             background-color: $white;
             position: absolute;
@@ -124,14 +142,14 @@ header {
 
         :before {
             content: '';
-            top: -8px;
+            top: -12px;
             
 
         }
 
         :after {
             content: '';
-            bottom: -8px;
+            bottom: -12px;
             
         }
 

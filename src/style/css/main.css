@@ -320,7 +320,7 @@ header {
 .nav-section .burger-opener .burger-lines,
 .nav-section .burger-opener .burger-lines:before,
 .nav-section .burger-opener .burger-lines:after {
-  width: 40px;
+  width: 37px;
   height: 2px;
   background-color: #fff;
   position: absolute;
@@ -328,11 +328,11 @@ header {
 }
 .nav-section .burger-opener :before {
   content: "";
-  top: -8px;
+  top: -12px;
 }
 .nav-section .burger-opener :after {
   content: "";
-  bottom: -8px;
+  bottom: -12px;
 }
 
 main {
