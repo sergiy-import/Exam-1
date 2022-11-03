@@ -8,9 +8,15 @@ main {
     background-repeat: no-repeat;
     background-position: 50% 50%;
     color: $white;
-    text-align: center;
-    padding: 211px 0 124px;
+    // text-align: center;
+    // padding: 211px 0 124px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     position: relative;
+    padding: 0 18px;
     
 
     .title {
@@ -20,6 +26,10 @@ main {
         font-weight: 700;
         font-size: 48px;
         line-height: 52px;
+
+        @include media ('<=320px') {
+            font-size: 39px;
+        }
     }
 
     .pseudo-title {
@@ -29,24 +39,27 @@ main {
         font-size: 22px;
         line-height: 28px;
         letter-spacing: 0.31em;
-        // margin-bottom: 48px;
+        margin-bottom: 48px;
+
+        @include media ('<=320px') {
+            font-size: 15px;
+        }
     }
+
+    
 
     .search-form {
-        max-width: 647px;
-        height: 60px;
-    }
-
-    form {
         // width: 647px;
         height: 60px;
         background-color: $white;
-        margin: 48px auto 211px;
+        
         padding: 4px 5px;
+        width: 100%;
+        max-width: 647px;
+        height: 60px;
+        margin-bottom: 250px;
 
-        @include media ('<=767px') {
-            margin: 48px 18px 211px;
-        }
+        
 
         input {
             border: none;
@@ -92,6 +105,7 @@ main {
         left: 50%;
         bottom: 123px;
         transform: translateX(-50%);
+        text-align: center;
 
 
         .scroll-link {
@@ -103,7 +117,7 @@ main {
             font-weight: 400;
             font-size: 14px;
             line-height: 20px;
-            text-align: center;
+            // text-align: center;
             letter-spacing: 0.2em;
             
     
@@ -111,6 +125,7 @@ main {
     
         .icon {
             font-size: 14px;
+            
         }
     }
 
@@ -415,6 +430,10 @@ main {
 
             @include media ('>=1024px') {
                 max-height: 336px;
+            }
+
+            @include media ('<=320px') {
+                padding: 20px 5px;
             }
 
             .hero-name {

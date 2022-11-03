@@ -345,9 +345,23 @@ main {
   background-repeat: no-repeat;
   background-position: 50% 50%;
   color: #fff;
-  text-align: center;
-  padding: 211px 0 124px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
+  padding: 0 18px;
 }
 .search .title {
   margin: 0 0 8px;
@@ -357,6 +371,11 @@ main {
   font-size: 48px;
   line-height: 52px;
 }
+@media (max-width: 320px) {
+  .search .title {
+    font-size: 39px;
+  }
+}
 .search .pseudo-title {
   font-family: "josefin_sans";
   font-style: normal;
@@ -364,23 +383,23 @@ main {
   font-size: 22px;
   line-height: 28px;
   letter-spacing: 0.31em;
+  margin-bottom: 48px;
 }
-.search .search-form {
-  max-width: 647px;
-  height: 60px;
-}
-.search form {
-  height: 60px;
-  background-color: #fff;
-  margin: 48px auto 211px;
-  padding: 4px 5px;
-}
-@media (max-width: 767px) {
-  .search form {
-    margin: 48px 18px 211px;
+@media (max-width: 320px) {
+  .search .pseudo-title {
+    font-size: 15px;
   }
 }
-.search form input {
+.search .search-form {
+  height: 60px;
+  background-color: #fff;
+  padding: 4px 5px;
+  width: 100%;
+  max-width: 647px;
+  height: 60px;
+  margin-bottom: 250px;
+}
+.search .search-form input {
   border: none;
   height: 52px;
   width: calc(100% - 143px);
@@ -392,7 +411,7 @@ main {
   letter-spacing: 0.2em;
   color: #999999;
 }
-.search form .btn {
+.search .search-form .btn {
   width: 139px;
   height: 52px;
   background-color: #5373FD;
@@ -406,10 +425,10 @@ main {
   line-height: 20px;
   letter-spacing: 0.1em;
 }
-.search form .btn .btn-icon {
+.search .search-form .btn .btn-icon {
   font-size: 16px;
 }
-.search form .btn .icon-search {
+.search .search-form .btn .icon-search {
   vertical-align: bottom;
   margin-right: 12px;
 }
@@ -419,6 +438,7 @@ main {
   bottom: 123px;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+  text-align: center;
 }
 .search .scroll .scroll-link {
   color: #fff;
@@ -429,7 +449,6 @@ main {
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
-  text-align: center;
   letter-spacing: 0.2em;
 }
 .search .scroll .icon {
@@ -738,6 +757,11 @@ main {
 @media (min-width: 1024px) {
   .what-say .grid-container .text-holder {
     max-height: 336px;
+  }
+}
+@media (max-width: 320px) {
+  .what-say .grid-container .text-holder {
+    padding: 20px 5px;
   }
 }
 .what-say .grid-container .text-holder .hero-name {

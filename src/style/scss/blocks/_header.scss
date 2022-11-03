@@ -33,6 +33,7 @@ header {
         
         padding: 32px;
 
+
         @include media ('<=767px') {
             width: 100%;
             background-color: $blue;
